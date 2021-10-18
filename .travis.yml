@@ -5,3 +5,5 @@ before_script:
   - python manage.py migrate
 script:
   test polls
+after_success:
+  - coveralls
