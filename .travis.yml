@@ -4,7 +4,7 @@ install:
 before_script:
   - python manage.py migrate
 script:
-  - test polls
-  - coverage report
+  - coverage run --source='.' manage.py test polls
+
 after_success:
   - coveralls
