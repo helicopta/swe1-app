@@ -4,6 +4,8 @@ install:
 before_script:
   - python manage.py migrate
 script:
+  - black .
+  - flake8 .
   - test polls
 after_success:
   - coveralls
